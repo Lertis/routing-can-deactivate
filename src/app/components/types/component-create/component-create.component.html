@@ -1,4 +1,5 @@
 <p>component-create works!</p>
-<app-common-builder-redirection [pageId]="(routeLayer$.getRouteParams() | async)?.pageId"
-	[mode]="(routeLayer$.getRouteParams() | async)?.mode" [compId]="(routeLayer$.getRouteParams() | async)?.compId">
-</app-common-builder-redirection>
+<ng-container *ngIf="routeLayer$.getRouteParams() | async as params">
+	<app-common-builder-redirection [pageId]="params.pageId" [mode]="params.mode" [compId]="params.compId">
+	</app-common-builder-redirection>
+</ng-container>
