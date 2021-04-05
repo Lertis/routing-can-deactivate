@@ -1,0 +1,4 @@
+<p>component-edit works!</p>
+<app-common-builder-redirection [pageId]="(routeLayer$.getRouteParams() | async)?.pageId"
+	[mode]="(routeLayer$.getRouteParams() | async)?.mode" [compId]="(routeLayer$.getRouteParams() | async)?.compId">
+</app-common-builder-redirection>
